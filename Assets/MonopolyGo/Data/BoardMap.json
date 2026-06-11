@@ -1,0 +1,16 @@
+{
+  "tiles": [
+    { "item": "None", "amount": 0 },
+    { "item": "Apple", "amount": 5 },
+    { "item": "Pear", "amount": 3 },
+    { "item": "None", "amount": 0 },
+    { "item": "Strawberry", "amount": 15 },
+    { "item": "Apple", "amount": 8 },
+    { "item": "None", "amount": 0 },
+    { "item": "Pear", "amount": 6 },
+    { "item": "Strawberry", "amount": 10 },
+    { "item": "None", "amount": 0 },
+    { "item": "Apple", "amount": 12 },
+    { "item": "Pear", "amount": 4 }
+  ]
+}
