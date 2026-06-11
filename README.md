@@ -1,3 +1,7 @@
+
+
+
+
 # MonopolyGo
 
 A 3D single-player board game prototype inspired by Monopoly GO / Dice Dreams.
@@ -104,4 +108,4 @@ Assets/MonopolyGo/
 
 ## Gameplay Video
 
-_TODO: add link to the gameplay capture._
+https://github.com/user-attachments/assets/d5f6105f-d202-477e-a3df-3de92052ba18
