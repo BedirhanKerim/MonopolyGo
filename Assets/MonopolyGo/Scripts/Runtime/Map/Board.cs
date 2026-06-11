@@ -21,7 +21,6 @@ namespace MonopolyGo
             MapData data = JsonUtility.FromJson<MapData>(m_MapJson.text);
             if (data == null || data.tiles == null || data.tiles.Length == 0)
             {
-                Debug.LogError("Board: map JSON is empty or invalid.", this);
                 return;
             }
 
@@ -49,7 +48,6 @@ namespace MonopolyGo
         {
             if (string.IsNullOrEmpty(raw) || !Enum.TryParse(raw, true, out ItemType item))
             {
-                Debug.LogWarning($"Board: unknown item '{raw}', treating as None.", this);
                 return ItemType.None;
             }
 

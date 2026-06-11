@@ -15,14 +15,6 @@ namespace MonopolyGo
         [SerializeField] private float m_PivotDuration = 0.18f;
         [SerializeField] private float m_ApproachAngle = 60f;
 
-        private void Awake()
-        {
-            if (m_FaceUpEulers.Length != k_FaceCount)
-            {
-                Debug.LogError($"{name}: FaceUpEulers must have {k_FaceCount} entries, one per face value.", this);
-            }
-        }
-
         public IEnumerator RollTo(int faceValue, Vector3 restCenter, Vector3 travelDir, int quarterRolls)
         {
             Vector3 rollAxis = Vector3.Cross(Vector3.up, travelDir).normalized;

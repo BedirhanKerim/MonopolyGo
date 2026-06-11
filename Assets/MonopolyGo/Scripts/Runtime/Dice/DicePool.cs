@@ -22,7 +22,7 @@ namespace MonopolyGo
 
         public Dice Get()
         {
-            Dice dice = m_Free.Count > 0 ? m_Free.Pop() : GrowOne();
+            Dice dice = m_Free.Count > 0 ? m_Free.Pop() : CreateDice();
             dice.gameObject.SetActive(true);
             return dice;
         }
@@ -32,12 +32,6 @@ namespace MonopolyGo
             dice.ResetForPool();
             dice.gameObject.SetActive(false);
             m_Free.Push(dice);
-        }
-
-        private Dice GrowOne()
-        {
-            Debug.Log("DicePool grew beyond its initial size.");
-            return CreateDice();
         }
 
         private Dice CreateDice()

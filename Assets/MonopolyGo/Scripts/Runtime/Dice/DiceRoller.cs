@@ -23,22 +23,13 @@ namespace MonopolyGo
         public void Init(Transform landingAnchor)
         {
             m_LandingAnchor = landingAnchor;
-
-            Dice dicePrefab = m_DicePrefab.GetComponent<Dice>();
-            if (dicePrefab == null)
-            {
-                Debug.LogError("Dice Prefab is missing the Dice component.", this);
-                return;
-            }
-
-            m_Pool = new DicePool(dicePrefab, transform, m_PoolSize);
+            m_Pool = new DicePool(m_DicePrefab.GetComponent<Dice>(), transform, m_PoolSize);
         }
 
         public void Roll(IReadOnlyList<int> values)
         {
             if (IsRolling)
             {
-                Debug.Log("Roll ignored: dice are still rolling.");
                 return;
             }
 
@@ -81,7 +72,6 @@ namespace MonopolyGo
                 sum += value;
             }
 
-            Debug.Log($"Dice roll sum: {sum}");
             GameEvents.RaiseDiceRollCompleted(sum);
 
             IsRolling = false;

@@ -68,7 +68,6 @@ namespace MonopolyGo
             }
 
             Tile tile = m_Board.GetTile(m_CurrentIndex);
-            Debug.Log($"Landed on tile {tile.Number}.");
             if (tile.HasReward)
             {
                 GameEvents.RaisePlayerLanded(transform.position, true);
